@@ -104,6 +104,24 @@ Citizen.CreateThread(function()
                     distance = 1.5
                 })
 
+        exports['qb-target']:AddBoxZone("craftingStation", vector3(171.68, -1315.93, 29.34), 0.7, 1.5, {
+            name="Crafting Station",
+            heading=91.25,
+            debugPoly=false,
+            minZ=28.0,
+            maxZ=31.0,
+        }, {
+                options = {
+                    {
+                        event = "pawn:chain_v",
+                        icon = "fas fa-rocket",
+                        label = "Chain Making",
+                        job = "pawnshop",
+                    },
+                },
+                distance = 1.5
+            })
+
         exports['qb-target']:AddBoxZone("pawn_register_1", vector3(173.69, -1317.48, 30.63), 0.5, 0.4, {
             name="pawn_register_1",
             debugpoly = false,
@@ -142,6 +160,30 @@ Citizen.CreateThread(function()
                 },
                 distance = 1.5
             })
+end)
+
+--Crafting--
+RegisterNetEvent('pawn:chain_v', function(data)
+    exports['qb-menu']:openMenu({
+        {
+            header = "| CRAFTEDITEMNAME HEADER |",
+            isMenuHeader = true,
+        },
+        {
+            header = "• Craft some Chains",
+            txt = "Iron, Steel, Gold and Metalscrap",
+            params = {
+                event = "qb-pawn:chain_v"
+            }
+        },
+        {
+            header = "⬅ Close Menu",
+            txt = 'Profit Time!',
+            params = {
+                event = 'qb-menu:closeMenu',
+            }
+        },
+    })
 end)
 
 RegisterNetEvent('pawn:stock', function(data)
