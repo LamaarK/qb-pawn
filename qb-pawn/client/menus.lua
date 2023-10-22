@@ -171,7 +171,7 @@ RegisterNetEvent('pawn:chain_v', function(data)
         },
         {
             header = "• Craft some Chains",
-            txt = "Iron, Steel, Gold and Metalscrap",
+            txt = "Iron, Steel, Diamond and Metalscrap",
             params = {
                 event = "qb-pawn:chain_v"
             }
