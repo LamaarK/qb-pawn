@@ -96,7 +96,7 @@ RegisterNetEvent("qb-pawn:Createchain_v", function()
 				}, {}, {}, function() -- Done
 					TriggerServerEvent('QBCore:Server:RemoveItem', "iron", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "steel", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "gold", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "diamond", 1)
 					TriggerServerEvent('QBCore:Server:AddItem', "metalscrap", 1)
 					TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["chain_v"], "add")
 					QBCore.Functions.Notify("You crafted a perfect chain!", "pawn")
