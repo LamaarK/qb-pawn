@@ -6,9 +6,9 @@ QBCore.Functions.CreateCallback('qb-pawn:server:get:ingredientchain_v', function
     local Ply = QBCore.Functions.GetPlayer(src)
     local iron = Ply.Functions.GetItemByName("iron")
     local steel = Ply.Functions.GetItemByName("steel")
-    local gold = Ply.Functions.GetItemByName("gold")
+    local diamond = Ply.Functions.GetItemByName("diamond")
     local metalscrap = Ply.Functions.GetItemByName("metalscrap")
-    if ITEM1 ~= nil and ITEM2 ~= nil and ITEM3 ~= nil and ITEM4 ~= nil then
+    if iron ~= nil and steel ~= nil and diamond ~= nil and metalscrap ~= nil then
         cb(true)
     else
         cb(false)
