@@ -19,12 +19,22 @@ Add the following under qb-core/shared/jobs:
 		label = 'Pawner', 
 		defaultDuty = false, offDutyPay = false,
 		grades = {
-		['0'] = {name = 'Recruit', payment = 50},
-		['1'] = {name = 'Novice', payment = 75},
-		['2'] = {name = 'Experienced', payment = 100},
-		['3'] = {name = 'Advanced', payment = 125},
+		['0'] = {name = 'Cleaner', payment = 50},
+		['1'] = {name = 'Delivery', payment = 75},
+		['2'] = {name = 'Smelter', payment = 100},
+		['3'] = {name = 'Crafter', payment = 125},
 		['4'] = {name = 'Manager/Owner', isboss = true, payment = 150},
 	},```
+
+Add the following items in your qb-core/shared/items.lua
+
+```['chain_v'] = {['name'] = 'chain_v', ['label'] = 'Beautiful Chain', ['weight'] = 100, ['type'] = 'item', ['image'] = 'chain_v.png' ['unique'] = true, ['useable'] = true, ['shouldClose'] = false,     ['combinable'] = nil, ['description'] = 'Crafted by the hands of a Pawnshop Specialist for you to wear.'},```
+
+![chain_v](https://github.com/LamaarK/qb-pawn/assets/65554339/614caa7f-8462-4854-843c-3cc57a341743)
+IMAGE FOR UPLOAD
+
+MORE ITEMS TO BE UPDATED FOR CRAFTING - USE THIS ONE FOR NOW
+    
 
 Then make sure you add the following job to your Database:
 
@@ -54,11 +64,19 @@ https://drive.google.com/file/d/1eZs2_fVmbyJRw9Lvx3XNPFpWjA0SiAMW/view
 qb-core and community
 
 **DEPENDENCIES**
-QB CORE https://github.com/qbcore-framework/qb-core
-QB TARGET https://github.com/qbcore-framework/qb-target
-QB PAWNSHOP https://github.com/qbcore-framework/qb-pawnshop
-QB MENU https://github.com/qbcore-framework/qb-menu
+QB CORE - https://github.com/qbcore-framework/qb-core
+QB TARGET - https://github.com/qbcore-framework/qb-target
+QB PAWNSHOP - https://github.com/qbcore-framework/qb-pawnshop
+QB MENU - https://github.com/qbcore-framework/qb-menu
+QB MANAGEMENT - https://github.com/qbcore-framework/qb-management
+
+**UPDATE**
+qb-chains-updated - https://github.com/qbcore-framework/qb-chains-updated (for the CRAFTING and USABLE ITEMS)
+
+
+
 POLYZONE https://github.com/mkafrin/PolyZone
+
 SMILES AND HAPPY FACES https://www.youtube.com/shorts/B65HNxMQZRk?feature=share
 
 Discord me: https://discord.gg/gB8s5fDe38 - For support if you need, I dont know much, but its good to grow a community and share amazing stuff
