@@ -78,3 +78,36 @@ RegisterNetEvent("qb-pawn:Storage2", function()
     })
 end)
 
+-- Crafting
+
+RegisterNetEvent("qb-pawn:Createchain_v", function()
+	if onDuty then
+		QBCore.Functions.TriggerCallback('qb-pawn:server:get:ingredientchain_v', function(HasItems)
+			if HasItems then
+				QBCore.Functions.Progressbar("pickup_sla", "Crafting a Chain..", 5000, false, true, {
+					disableMovement = true,
+					disableCarMovement = true,
+					disableMouse = false,
+					disableCombat = true,
+				}, {
+					animDict = "mp_common",
+					anim = "givetake1_a",
+					flags = 8,
+				}, {}, {}, function() -- Done
+					TriggerServerEvent('QBCore:Server:RemoveItem', "iron", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "steel", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gold", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "metalscrap", 1)
+					TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["chain_v"], "add")
+					QBCore.Functions.Notify("You crafted a perfect chain!", "pawn")
+				end, function()
+					QBCore.Functions.Notify("Cancelled..", "pawn")
+				end)
+			else
+				QBCore.Functions.Notify("You are missing items", "pawn")
+			end
+		end)
+	else
+		QBCore.Functions.Notify("SAY HERE WHATEVER YOU NEED TO", "pawn")
+	end
+end)
