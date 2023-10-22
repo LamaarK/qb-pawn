@@ -31,7 +31,7 @@ Add the following items in your qb-core/shared/items.lua
 ```['chain_v'] = {['name'] = 'chain_v', ['label'] = 'Beautiful Chain', ['weight'] = 100, ['type'] = 'item', ['image'] = 'chain_v.png' ['unique'] = true, ['useable'] = true, ['shouldClose'] = false,     ['combinable'] = nil, ['description'] = 'Crafted by the hands of a Pawnshop Specialist for you to wear.'},```
 
 ![chain_v](https://github.com/LamaarK/qb-pawn/assets/65554339/614caa7f-8462-4854-843c-3cc57a341743)
-IMAGE FOR UPLOAD
+IMAGE FOR INVENTORY
 
 MORE ITEMS TO BE UPDATED FOR CRAFTING - USE THIS ONE FOR NOW
     
