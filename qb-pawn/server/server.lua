@@ -1,5 +1,21 @@
 QBCore = exports["qb-core"]:GetCoreObject()
 
+--Crafting--
+QBCore.Functions.CreateCallback('qb-pawn:server:get:ingredientchain_v', function(source, cb)
+    local src = source
+    local Ply = QBCore.Functions.GetPlayer(src)
+    local iron = Ply.Functions.GetItemByName("iron")
+    local steel = Ply.Functions.GetItemByName("steel")
+    local gold = Ply.Functions.GetItemByName("gold")
+    local metalscrap = Ply.Functions.GetItemByName("metalscrap")
+    if ITEM1 ~= nil and ITEM2 ~= nil and ITEM3 ~= nil and ITEM4 ~= nil then
+        cb(true)
+    else
+        cb(false)
+    end
+end)
+
+
 --Billing--
 RegisterServerEvent("qb-pawn:bill:player", function(playerId, amount)
     local biller = QBCore.Functions.GetPlayer(source)
