@@ -166,7 +166,7 @@ end)
 RegisterNetEvent('pawn:chain_v', function(data)
     exports['qb-menu']:openMenu({
         {
-            header = "| CRAFTEDITEMNAME HEADER |",
+            header = "| Beautiful Chain |",
             isMenuHeader = true,
         },
         {
